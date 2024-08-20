@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_mis{
+  font-family: 'Poppins', sans-serif;
+  font-weight:400;
+  letter-spacing:0.5px;
+}
+
+#mis_img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mis_head {
+  font-size: clamp(2rem, 1.875rem + 0.625vw, 2.5rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.main_mis {
+  display: grid;
+  grid-template-columns: 25% 30% 15% 25%;
+  gap: 15px;
+  place-content: center;
+  grid-template-rows: 50% 50%;
+  height: 80vh;
+  min-height: 460px;
+  padding: max(2vh, 1.5rem);
+}
+@media screen and (max-width: 690px) {
+  .main_mis {
+    height: 65vh;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main_mis {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 35%);
+  }
+}
+.main_mis .card_mis {
+  border-radius: 25px;
+  box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.26);
+}
+@media screen and (max-width: 470px) {
+  .main_mis .card_mis {
+    grid-column: span 1;
+  }
+}
+.main_mis .card_mis:nth-child(2) {
+  grid-column: 2/3;
+  grid-row: span 2;
+}
+@media screen and (max-width: 690px) {
+  .main_mis .card_mis:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+.main_mis .card_mis:nth-child(3) {
+  grid-column: span 2;
+}
+@media screen and (max-width: 690px) {
+  .main_mis .card_mis:nth-child(3) {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+}
+@media screen and (max-width: 690px) {
+  .main_mis .card_mis:nth-child(6) {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 470px) {
+  .main_mis .card_mis:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+.main_mis .card_mis .mis_subhead {
+  visibility: hidden;
+  font-size: clamp(0.9rem, 0.875rem + 0.125vw, 1rem);
+  line-height: 1.4;
+  color: #fff;
+}
+.main_mis .card_mis #mis_img {
+  border-radius: 25px;
+}
+.main_mis .card_mis .card_mis__img {
+  position: relative;
+  height: 100%;
+}
+.main_mis .card_mis .card_mis__img .card_mis__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  color: #fff;
+  padding: clamp(0.938rem, 5vw, 1.563rem);
+  background: rgb(2, 2, 46);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.57) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+@media (max-width: 500px){
+  .mis_head {
+    font-size: clamp(1rem, 1.5rem + 0.625vw, 1.5rem);
+  }
+}
+
+/* CSS */
+.button-24 {
+  margin: 2rem;
+  width: 97%;
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 60px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+@media (max-width: 500px) {
+  .button-24{
+    margin-left: 0.7rem;
+    width: 94% !important;
+  }
+}
+
+@media (min-width: 500px){
+  .button-24{
+    width: 98% !important;
+  }
+}

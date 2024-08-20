@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    margin: 0;
+}
+
+.text-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    margin-top: -2rem;
+}
+
+.elegant {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    color: #b48b14;
+    margin: 0;
+    font-weight: 900;
+}
+
+.cursive {
+    font-family: "Allura", cursive;
+    font-size: 64px;
+    color: #000;
+    margin: 0.2em;
+    margin-top: 0.4em;
+}
+
+@media (min-width: 500px) and (max-width: 800px){
+    .cursive {
+        font-size: 54px;
+    }
+}
+
+@media (max-width: 500px){
+    .elegant {
+        font-size: 30px;
+    }
+    .cursive {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px){
+    .elegant {
+        font-size: 20px;
+    }
+    .cursive {
+        font-size: 20px;
+    }
+}

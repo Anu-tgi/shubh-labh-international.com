@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.main_head_sh{
+    background-color: #FFF;
+    /* position: relative; */
+    color: #000; 
+    font-family: 'Arial', sans-serif;
+    /* display: flex; */
+    justify-content: center;
+    /* height: 15vh; */
+}
+
+.container_sh {
+    text-align: center;
+}
+.title_sh {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 5px;
+}
+.double-line_sh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+.double-line_sh div {
+    border-top: 2px solid;
+    width: 100%;
+    margin: 2px 0;
+}
+
+@media (min-width: 1100px){
+    .container_sh{
+        margin-top: 0.7rem;
+    }
+}
+
+@media (max-width: 500px){
+    .container_sh{
+        margin-top: 1.8rem;
+    }
+    .title_sh{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 800px){
+    .main_head_sh {
+        background-color: #FFF;
+        position: relative;
+        color: #000;
+        font-family: 'Arial', sans-serif;
+        /* display: flex; */
+        justify-content: center;
+        /* height: 15vh; */
+        /* text-align: center; */
+        margin-top: 7rem;
+    }
+}

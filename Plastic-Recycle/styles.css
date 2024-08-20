@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container_recycle {
+    display: flex;
+    flex-wrap: nowrap; /* Change wrap to nowrap to prevent wrapping */
+    height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+/* Filter Section Styles */
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-heading {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #b8d3ef;
+    color: #000000;
+    border-radius: 4px;
+    margin: 0;
+}
+
+.filter-content {
+    list-style-type: none;
+    padding-left: 20px;
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+}
+
+.filter-content ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.filter-checkbox {
+    margin-right: 10px;
+}
+
+.filter-group ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Change wrap to nowrap to prevent wrapping */
+    height: 100vh; /* Ensure the container takes the full height of the viewport */
+}
+
+.filter-section {
+    width: 20%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    background-color: #f7f7f7;
+}
+
+.filter-section {
+    width: 20%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    background-color: #f7f7f7;
+}
+
+.products-section {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Ensure products align to the start */
+    overflow-y: auto; /* Add vertical scrolling if needed */
+}
+
+.product-card {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px; /* Add margin for spacing between cards */
+    padding: 15px;
+    width: calc(33.33% - 20px); /* Adjust width to account for margin */
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .product-card {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .product-card {
+        width: calc(100% - 20px); /* Full width for very small screens */
+    }
+}

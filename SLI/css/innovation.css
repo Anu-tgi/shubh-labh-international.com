@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+:root {
+  --color1: #E41936;
+  --color2: #E7E31D;
+  --color3: #3BB7CE;
+}
+
+.inn-innovation_main {
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+
+.inn-innovation_main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.inn-innovation_main .inn-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.inn-innovation_main .inn-hero-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inn-innovation_main .inn-hero-left h1 {
+  text-align: center;
+}
+.inn-innovation_main .inn-hero-left button {
+  position: absolute;
+  padding: 10px 15px;
+  margin: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.inn-innovation_main .inn-hero-left button:last-of-type {
+  right: 0;
+}
+.inn-innovation_main .inn-hero-left button:active {
+  transform: scale(0.9);
+}
+.inn-innovation_main .inn-hero-left .inn-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer {
+  display: grid;
+  grid-template-rows: 6rem 3fr 1fr;
+  background-color: white;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.5s;
+  transform: translateX(100%);
+  opacity: 0;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer-displayed {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 1;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer-displayed-exit {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer > span {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer__image {
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: center center;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer__info {
+  font-size: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+/* .inn-innovation_main .inn-hero-left .inn-layers .inn-layer__info div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer__info div:first-child {
+  align-items: flex-end;
+  color: gray;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer__info div:last-child {
+  font-weight: bold;
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer:nth-child(1) > span {
+  color: var(--color1);
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer:nth-child(2) > span {
+  color: var(--color2);
+}
+.inn-innovation_main .inn-hero-left .inn-layers .inn-layer:nth-child(3) > span {
+  color: var(--color3);
+}
+.inn-innovation_main .inn-hero-right > .inn-layer:nth-child(4) {
+  background-color: pink;
+}
+.inn-innovation_main .inn-hero-right {
+  grid-column: 2;
+  position: relative;
+  overflow: hidden;
+}
+.inn-innovation_main .inn-hero-right > .inn-layer {
+  background-color: #E41936;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition-delay: 0.5s;
+}
+.inn-innovation_main .inn-hero-right > .inn-layer-displayed {
+  transform: translateX(0);
+  z-index: 2;
+}
+.inn-innovation_main .inn-hero-right > .inn-layer-displayed-exit {
+  transition-delay: 1s;
+  transition-duration: 0;
+  z-index: 1;
+}
+.inn-innovation_main .inn-hero-right > .inn-layer:nth-child(1) {
+  background-color: var(--color1);
+}
+.inn-innovation_main .inn-hero-right > .inn-layer:nth-child(2) {
+  background-color: var(--color2);
+}
+.inn-innovation_main .inn-hero-right > .inn-layer:nth-child(3) {
+  background-color: var(--color3);
+}
+.inn-innovation_main .inn-hero-right .inn-photo-name {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  width: 20%;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-name span {
+  display: block;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-name__wrapper {
+  position: relative;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-name__title {
+  font-weight: bold;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-name .inn-layer {
+  padding: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.inn-innovation_main .inn-hero-right .inn-photo-name .inn-layer-displayed {
+  transform: translateX(0);
+  transition-delay: 0.5s;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame {
+  position: absolute;
+  overflow: hidden;
+  animation-play-state: paused;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame:nth-child(4) {
+  top: 10%;
+  left: 10%;
+  width: 40%;
+  height: 40%;
+  z-index: 3;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame:nth-child(4) .inn-cover {
+  background-color: black;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame:last-child {
+  top: 15%;
+  left: 8%;
+  width: 85%;
+  height: 70%;
+  z-index: 2;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame .inn-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: white;
+  transition: width 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame .inn-layer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+.inn-innovation_main .inn-hero-right .inn-photo-frame .inn-layer-displayed {
+  opacity: 1;
+}
+
+@keyframes inn-cover {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  95% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 500px){
+  .inn-innovation_main .inn-hero-left .inn-layers .inn-layer > span{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px){
+  .inn-innovation_main .inn-hero-left{
+    width: 300%;
+  }
+  .inn-innovation_main .inn-hero-right{
+    width: 0;
+  }
+}

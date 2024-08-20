@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.container_bh {
+    font-family: 'Archivo Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.heading_bh {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4em;
+    margin: 0;
+}
+
+.languages_bh {
+    font-family: 'Archivo Black', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 33.5rem;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    margin: -0.05rem;
+}
+
+.designer_bh {
+    font-family: 'Archivo Black', sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 33.5rem;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    margin: -0.05rem;
+}

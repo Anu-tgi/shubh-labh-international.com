@@ -1,0 +1,89 @@
+/* Product Grades */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .table-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #e1bee7; /* Pastel yellow */
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f3e5f5; /* Pastel purple */
+  }
+  
+  tr:hover {
+    background-color: #e1bee7; /* Light purple */
+  }
+  
+  td:nth-child(1),
+  td:nth-child(5) {
+    width: 10%; /* Making the 'Serial Number' and 'TDS' columns smaller */
+  }
+
+  td:nth-child(2){
+    width: 15%;
+  }
+
+  td:nth-child(6){
+    width: 8%;
+  }
+  
+  
+  td:nth-child(3) {
+    width: 10%; /* Adjusting 'Product Name' and 'Product Code' columns width */
+  }
+  
+  /* Targeting the Applications column specifically */
+  td[data-label="Applications"] {
+    background-color: #f3e5f5; /* Pastel purple */
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media screen and (max-width: 768px) {
+    th, td {
+      padding: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    /* Hide Applications column */
+    td[data-label="Applications"],
+    th[data-label="Applications"] {
+      display: none;
+    }
+  
+    /* Center-align content in remaining cells */
+    th, td {
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,227 @@
+
+
+.trans-quick {
+  transition: all 0.3s ease-in-out;
+}
+.bg-word {
+  background: #f0f0f0;
+  padding: 10px;
+  margin: 5px;
+}
+
+.main{
+  overflow: hidden;
+  background: #AEE5D8 url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/380275/paper-3.png") repeat fixed center;
+  font-family: "Libre Baskerville", Georgia, serif;
+  color: #555;
+  height: 80vh;
+  width: 100%;
+}
+
+.trans-quick {
+  transition: all 0.4s;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.bg-word {
+  cursor: default;
+  padding: 2rem 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-size: 20vw;
+  line-height: 20vw;
+  word-wrap: break-word;
+  position: absolute;
+  top: 90vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#behind {
+  color: #e0b0d5;
+  opacity: 0.3;
+}
+
+#infront {
+  color: #555;
+  opacity: 0.035;
+  z-index: 20;
+}
+
+#card {
+  margin: 2rem;
+  overflow: hidden;
+  z-index: 10;
+  padding: 3rem;
+  width: 115vw;
+  max-width: 50rem;
+  min-height: 15.75rem;
+  box-shadow: 0 50px 70px -50px rgba(0, 0, 0, 0.45), 0 50px 200px -50px rgba(0, 0, 0, 0.5);
+  background: #FFF;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 25rem;
+}
+
+#card * {
+  transition: opacity 0.4s, text-shadow 0.8s, color 0.4s, transform 0s;
+  opacity: 1;
+}
+
+#word {
+  align-self: flex-end;
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+#language {
+  font-size: 1.1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
+  align-self: flex-end;
+  font-style: italic;
+  line-height: auto;
+  color: #e0b0d5;
+}
+
+#description {
+  width: 100%;
+}
+
+button {
+  margin: 20px;
+  width: 0px;
+  height: 0px;
+  z-index: 25;
+  background: transparent;
+  border-radius: 0;
+  outline: none;
+  border: none;
+}
+
+#last {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgba(255, 255, 255, 0.5);
+  transition: 0.1s;
+}
+#last:hover {
+  border-right: 20px solid rgba(255, 255, 255, 0.9);
+}
+
+#next {
+  order: 3;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid rgba(255, 255, 255, 0.5);
+  transition: 0.1s;
+}
+#next:hover {
+  border-left: 20px solid rgba(255, 255, 255, 0.9);
+}
+
+#container > button:active ~ #card {
+  transition: 0.05s 0s;
+  transform: translateY(0.5rem);
+}
+
+body.fadeout {
+  background: #e0b0d5 url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/380275/paper-3.png") repeat fixed center;
+}
+
+body.fadeout .bg-word#infront {
+  opacity: 0;
+}
+
+#card.fadeout #word,
+#card.fadeout #description,
+#card.fadeout #language {
+  opacity: 0;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(-21rem) scale(3);
+  transition: all 1.2s 0.1s, color 0.5s 0s, text-shadow 0.5s 0s;
+}
+
+#card.fadeout #description {
+  transform: translateY(21rem) translateX(-6rem) scale(2);
+}
+
+@media (max-width: 600px) {
+  a {
+    width: 50px;
+    height: 50px;
+  }
+  button {
+    padding: 0;
+  }
+  #last {
+    margin: 0 0.4rem 0 0;
+  }
+  #next {
+    margin: 0 0 0 0.4rem;
+  }
+  #card {
+    padding: 1rem;
+    min-height: 10rem;
+  }
+  #word {
+    font-size: 1.5rem;
+  }
+  #language, #description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 2450px){
+  #card{
+    max-width: 110rem;
+    min-height: 25rem;
+  }
+  #word{
+    font-size: 5rem;
+  }
+  #language{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+  }
+  #description{
+    font-size: 1.5rem;
+  }
+  .main{
+    height: 75vh;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 1440px){
+  .main{
+    height: 80vh;
+  }
+  #card{
+    height: 15rem;
+  }
+}
+@media (max-width: 450px){
+  .bg-word{
+    font-size: 48vw;
+    line-height: 35vw;
+  }
+  #card{
+    height: 30rem;
+  }
+  .main{
+      height: 100vh;
+  }
+}

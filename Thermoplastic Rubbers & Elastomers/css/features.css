@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+body {
+  margin: 0;
+  background: #ECEFFC;
+}
+
+.container_feat{
+  padding-bottom: 4em;
+  padding-right: 0;
+  margin-right: 0;
+  /* padding-right: 2em; */
+  padding-top: 4em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.nav-links_feat li{
+  margin-left: 1rem;
+}
+
+.carousel_feat {
+  position: relative;
+  display: flex;
+}
+.carousel_feat .slides_feat {
+  position: relative;
+  top: -2em;
+  left: 10em;
+}
+.carousel_feat .slides_feat img {
+  position: absolute;
+  width: 450px;
+  height: 420px;
+  opacity: 0;
+  z-index: 9999;
+}
+.carousel_feat .slides_feat img.active {
+  opacity: 1;
+}
+.carousel_feat .overlays_feat {
+  position: relative;
+  width: 36em;
+  height: 18em;
+}
+.carousel_feat .overlays_feat .bar {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bar-color);
+  transform-origin: left;
+}
+.carousel_feat .nav-links_feat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0 0 0 2em;
+  list-style-type: none;
+}
+.carousel_feat .nav-links_feat .nav-link_feat {
+  font-size: 2rem;
+  font-family: Lora, serif;
+  line-height: 2;
+  text-decoration: none;
+  color: #7f8c8d;
+  transition: 0.3s;
+}
+.carousel_feat .nav-links_feat .nav-link_feat:hover {
+  color: #1c1e1f;
+}
+.carousel_feat .nav-links_feat .nav-link_feat.active {
+  color: black;
+  pointer-events: none;
+}
+
+@media (max-width: 1025pxpx){
+  .carousel_feat .nav-links_feat .nav-link_feat{
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 780px){
+  .carousel_feat .nav-links_feat .nav-link_feat{
+    font-size: 1.3rem;
+  }
+  .carousel_feat .slides_feat {
+    left: 5rem;
+  }
+  .carousel_feat .nav-links_feat {
+    padding: 0;
+    padding-left: -2rem;
+    /* padding-right: 2rem; */
+  }
+}
+
+@media (max-width: 450px) {
+  .carousel_feat .overlays_feat {
+    position: relative;
+    width: 10em;
+    height: 18em;
+  }
+
+  .carousel_feat .nav-links_feat {
+    padding: 0;
+    padding-left: 1rem;
+  }
+  .carousel_feat .slides_feat img {
+    margin-top: 5rem;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    z-index: 9999;
+  }
+
+  .carousel_feat .nav-links_feat .nav-link_feat {
+    font-size: 1.2rem;
+  }
+
+  .carousel_feat .slides_feat {
+    left: -3rem;
+  }
+}

@@ -1,0 +1,207 @@
+/* 
+
+	Font style.
+	Easier way to style fonts in one single line.
+
+*/
+/* 
+
+	Utilities
+
+*/
+#car-val-content #car-val-slider .navigation ul li .li__hoverLine, #car-val-content #car-val-slider .navigation ul li .li__info,
+#car-val-content #car-val-slider .navigation ul li .li__info-mask .mask__infoContainer, #car-val-content #car-val-slider .navigation, #car-val-content #car-val-slider {
+  width: 100%;
+}
+
+#car-val-content #car-val-slider {
+  height: 100%;
+}
+
+#car-val-content #car-val-slider .navigation ul li a, #car-val-content #car-val-slider .backgroundImages .bi__imgCont .bi__imgCont-img, #car-val-content #car-val-slider .backgroundImages .bi__imgCont, #car-val-content #car-val-slider .backgroundImages, #car-val-content #car-val-slider .mainImages .mi__img, #car-val-content #car-val-slider .mainImages, #car-val-content {
+  width: 100%;
+  height: 100%;
+}
+
+#car-val-content #car-val-slider .navigation ul li, #car-val-content #car-val-slider .navigation ul {
+  width: auto;
+  display: table;
+}
+
+#car-val-content #car-val-slider .navigation ul li .li__info,
+#car-val-content #car-val-slider .navigation ul li .li__info-mask .mask__infoContainer, #car-val-content #car-val-slider .navigation ul li a, a {
+  transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1); /* easeOutExpo */
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); /* easeOutExpo */
+}
+
+/* Styles */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.full {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.val-car {
+  background: #333333;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+#car-val-content {
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+}
+#car-val-content .c {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0px;
+  color: white;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99999;
+  text-align: center;
+}
+#car-val-content .c a {
+  color: white;
+  text-decoration: underline;
+}
+#car-val-content #car-val-slider {
+  position: relative;
+  /* Main images navigation */
+  /* Background Images (Blur effect) */
+  /* Navigation styles */
+}
+#car-val-content #car-val-slider img {
+  display: none;
+}
+#car-val-content #car-val-slider .mainImages {
+  position: relative;
+  z-index: 1;
+}
+#car-val-content #car-val-slider .mainImages .mi__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* -webkit-transform: scale(0.7);
+  transform: scale(0.7); */
+}
+#car-val-content #car-val-slider .backgroundImages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+#car-val-content #car-val-slider .backgroundImages .bi__imgCont {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+#car-val-content #car-val-slider .backgroundImages .bi__imgCont .bi__imgCont-img {
+  position: relative;
+}
+#car-val-content #car-val-slider .navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+  z-index: 2;
+}
+#car-val-content #car-val-slider .navigation ul {
+  margin: 90px auto;
+}
+#car-val-content #car-val-slider .navigation ul li {
+  float: left;
+  margin-right: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+#car-val-content #car-val-slider .navigation ul li:last-child {
+  margin-right: 0;
+}
+#car-val-content #car-val-slider .navigation ul li:hover .li__info {
+  opacity: 0.9 !important;
+}
+#car-val-content #car-val-slider .navigation ul li.active .li__hoverLine .l {
+  width: 100%;
+}
+#car-val-content #car-val-slider .navigation ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#car-val-content #car-val-slider .navigation ul li .li__info,
+#car-val-content #car-val-slider .navigation ul li .li__info-mask .mask__infoContainer {
+  overflow: hidden;
+  opacity: 0.7;
+}
+#car-val-content #car-val-slider .navigation ul li .li__info h5,
+#car-val-content #car-val-slider .navigation ul li .li__info-mask .mask__infoContainer h5 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0px;
+  color: white;
+  float: left;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  padding: 4px 0px 5px 0px;
+}
+#car-val-content #car-val-slider .navigation ul li .li__info h4,
+#car-val-content #car-val-slider .navigation ul li .li__info-mask .mask__infoContainer h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: white;
+  /* color: black; */
+  float: left;
+  padding-left: 6px;
+  text-transform: uppercase;
+}
+#car-val-content #car-val-slider .navigation ul li .li__info-mask {
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  overflow: hidden;
+}
+#car-val-content #car-val-slider .navigation ul li .li__info-mask .mask__infoContainer {
+  opacity: 1;
+}
+#car-val-content #car-val-slider .navigation ul li .li__hoverLine {
+  height: 1px;
+  float: left;
+  margin-top: 8px;
+}
+#car-val-content #car-val-slider .navigation ul li .li__hoverLine .l {
+  width: 0%;
+  height: 1px;
+  background: #cccccc;
+  margin: 0 auto;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}

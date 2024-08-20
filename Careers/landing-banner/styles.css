@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #f3eae5;
+  --text-dark: #2c2724;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.car-banner-btn {
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.car-banner-container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 0;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.car-banner-container__left {
+  padding-inline: 1rem;
+  text-align: center;
+  margin-left: 2em;
+}
+
+.car-banner-container__left h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+  color: var(--text-dark);
+}
+
+.car-banner-container__left .car-banner-btn {
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  color: var(--white);
+  background-color: var(--text-dark);
+  border-radius: 5rem;
+  margin-left: 8em;
+}
+
+.car-banner-container__left .car-banner-btn:hover {
+  color: var(--text-dark);
+  background-color: var(--primary-color);
+}
+
+.car-banner-container__right {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 2rem;
+}
+
+.car-banner-container__right::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transform-origin: left;
+  height: 80%;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  z-index: -1;
+
+  animation: show 0.75s 1.25s ease-in-out forwards;
+}
+
+@keyframes show {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 2rem);
+  }
+}
+
+.car-banner-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-banner-tent-1 {
+  max-width: 300px;
+  transform: translateX(1rem);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.car-banner-tent-2 {
+  max-width: 180px;
+  transform: translateX(-1rem);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.car-banner-content {
+  padding-block: 0 5rem;
+  padding-inline: 2rem;
+  text-align: center;
+}
+
+.car-banner-content h4 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.car-banner-content h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-dark);
+}
+
+.car-banner-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.car-banner-content p {
+  line-height: 1.75rem;
+  color: var(--text-dark);
+}
+
+
+
+
+
+
+@media (width > 768px) {
+ 
+
+  .car-banner-container {
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .car-banner-container__left {
+    text-align: left;
+  }
+}
+
+@media (width > 1024px) {
+  .car-banner-container__right {
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+  }
+
+  .car-banner-container__right::before {
+    bottom: unset;
+    top: 0;
+    height: 90%;
+  }
+
+  .car-banner-images {
+    flex-direction: column;
+  }
+
+  .car-banner-tent-1 {
+    width: calc(100% + 10rem);
+    max-width: 325px;
+    transform: translate(-2rem, 2rem);
+  }
+
+  .car-banner-tent-2 {
+    max-width: 200px;
+    transform: translate(4rem, -1rem);
+  }
+
+  .car-banner-content {
+    padding-block: 5rem;
+    text-align: left;
+    max-width: 400px;
+    margin-inline-start: unset;
+  }
+}

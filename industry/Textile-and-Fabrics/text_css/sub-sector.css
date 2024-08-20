@@ -1,0 +1,324 @@
+/* slider of sub category */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+.mov-btns{
+  display: flex;
+  /* justify-content: space-between; */
+  background: #4c3c55;
+  padding-top: 8px;
+}
+.mov-btns-l{
+  display: flex;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+.first1-btn{
+  margin-top: 5px;
+  font-size: 1.5em;
+  margin-left: 2em;
+  margin-right: 4px;
+  color: white;
+}
+.first2-btn{
+  margin-top: 5px;
+  font-size: 1.5em;
+  margin-left: 3px;
+  margin-right: 2px;
+  color: white;
+}
+.home-page-name{
+  font-size: 1.3em;
+  margin-top: 8px;
+  color: white;
+}
+.indus-page-name{
+  font-size: 1.3em;
+  margin-top: 8px;
+  color: white;
+}
+.name-page-name{
+  font-size: 1.3em;
+  margin-top: 8px;
+  color: white;
+}
+.mov-btns-r{
+  display: flex;
+  margin-left: 4px;
+  margin-top: 2px;
+  color: white;
+}
+.second-btn{
+  margin-top: 5px;
+  font-size: 1.5em;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+}
+
+.mov-btns-l:hover .first1-btn,
+.move-btns-r:hover .second-btn{
+  text-decoration: underline;
+}
+
+.home-page-name:hover,
+.indus-page-name:hover,
+.name-page-name:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+.ind-slider-heading,.ind-brief-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    color:black !important;
+}
+
+.ind-slider-container {
+  width: 100%;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ind-slider-images {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.ind-slider-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ind-slider-img {
+  width: 110px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.7s ease;
+}
+
+.ind-slider-images .ind-slider-img:first-child,
+.ind-slider-images .ind-slider-img:last-child {
+  height: 300px;
+}
+
+.ind-slider-images .ind-slider-img:nth-child(2),
+.ind-slider-images .ind-slider-img:nth-child(6) {
+  height: 400px;
+}
+
+.ind-slider-images .ind-slider-img:nth-child(3),
+.ind-slider-images .ind-slider-img:nth-child(4),
+.ind-slider-images .ind-slider-img:nth-child(5) {
+  height: 500px;
+}
+
+.ind-slider-h1 {
+  font-family: "Jost", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  /* text-align: left; */
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: -40%;
+  transform: rotate(270deg);
+  transition: 0.7s ease;
+}
+.ind-t-slider-heading4{
+  left:-28% !important;
+}
+.ind-t-slider-heading5{
+  left: -60% !important;
+}
+.ind-t-slider-heading3{
+  left:-10% !important;
+}
+/* .ind-t-slider-heading3{
+  left: -40% !important;
+  right: -40% !important;
+} */
+.ind-t-slider-heading1{
+ 
+  left: -50% !important;
+}
+.ind-t-slider-heading2{
+  left: -20% !important;
+}
+
+.ind-details {
+  position: absolute;
+  bottom: 43px;
+  left: 43px;
+}
+
+.ind-details .ind-slider-h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.7s ease;
+  display: none;
+  margin-top: -2rem;
+}
+
+.ind-slider-img.active {
+  width: 500px !important;
+  height: 400px !important;
+}
+
+.ind-slider-img.active .ind-slider-h1 {
+  display: none;
+}
+
+.ind-slider-img.active .ind-details,
+.ind-slider-img.active .ind-details .ind-slider-h2 {
+  display: block;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 800px) {
+  .ind-slider-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .ind-slider-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ind-slider-img {
+    width: 100%;
+  }
+
+  .ind-slider-img.active {
+    width: 90% !important;
+    height: auto !important;
+  }
+  .ind-t-slider-heading1,.ind-t-slider-heading2{
+    font-size: 25px;
+    left: 50% !important;
+  }
+  .ind-t-slider-heading3{
+    /* top: 10%; */
+    left: 40% !important;
+   
+  }
+  .ind-t-slider-heading4,.ind-t-slider-heading5{
+    left: 40% !important;
+  }
+  .ind-t-slider-heading5{
+    font-size: 20px;
+  }
+
+  .ind-slider-images .ind-slider-img:first-child,
+  .ind-slider-images .ind-slider-img:last-child,
+  .ind-slider-images .ind-slider-img:nth-child(2),
+  .ind-slider-images .ind-slider-img:nth-child(6),
+  .ind-slider-images .ind-slider-img:nth-child(3),
+  .ind-slider-images .ind-slider-img:nth-child(4),
+  .ind-slider-images .ind-slider-img:nth-child(5) {
+    height: auto;
+  }
+}
+
+/* Responsive styles for large screens */
+@media (min-width: 800px) {
+  .ind-slider-container {
+    padding: 20px;
+  }
+  
+  .ind-slider-img.active {
+    width: 600px !important;
+    height: 500px !important;
+  }
+}
+
+/* Responsive styles for small screens (mobiles) */
+@media (max-width: 700px) {
+  .ind-slider-container {
+    flex-direction: column;
+    height: auto;
+    /* padding: 20px; */
+  }
+
+  .ind-slider-images {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ind-t-slider-heading1{
+    left: 60% !important;
+    font-size: 1em !important;
+  }
+  .ind-t-slider-heading2{
+    left: 60% !important;
+    font-size: 1em !important;
+  }
+  .ind-t-slider-heading3{
+    top: 3.3em;
+    left: 50% !important;
+    right: 0% !important;
+    font-size: 1em !important;
+  }
+  .ind-t-slider-heading4,.ind-t-slider-heading5{
+    left: 60% !important;
+    line-height: 1em;
+    font-size: 1em !important;
+  }
+  .ind-slider-img {
+    width: 100%;
+  }
+
+  .ind-slider-img.active {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .ind-slider-images .ind-slider-img:last-child,
+  .ind-slider-images .ind-slider-img:first-child,
+  .ind-slider-images .ind-slider-img:nth-child(2),
+  .ind-slider-images .ind-slider-img:nth-child(6),
+  .ind-slider-images .ind-slider-img:nth-child(3),
+  .ind-slider-images .ind-slider-img:nth-child(4),
+  .ind-slider-images .ind-slider-img:nth-child(5) {
+    height: auto;
+  }
+
+  .ind-slider-h1 {
+    font-size: 24px;
+    left: -5%;
+  }
+
+  .ind-details .ind-slider-h2 {
+    font-size: 20px;
+  }
+  .mov-btns-l,.mov-btns-r{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .first1-btn{
+    margin-left: 0;
+  }
+}
