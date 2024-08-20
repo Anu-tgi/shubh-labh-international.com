@@ -1,40 +1,66 @@
-// script.js
+// Function to toggle dropdown visibility
+function toggleDropdown(target) {
+  const element = document.getElementById(target);
+  element.classList.toggle('show');
+}
 
-document.addEventListener("DOMContentLoaded", function () {
-  const checkboxes = document.querySelectorAll(".filter-checkbox");
-  const products = document.querySelectorAll(".product-card");
+// Function to filter products based on selected checkboxes
+function filterProducts() {
+  const allCheckboxes = document.querySelectorAll('.filter-checkbox');
+  const productCards = document.querySelectorAll('.product-card');
+  const activeFilters = {};
 
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", filterProducts);
-  });
-
-  function filterProducts() {
-    const activeFilters = Array.from(checkboxes)
-      .filter((checkbox) => checkbox.checked)
-      .map((checkbox) => checkbox.id);
-
-    products.forEach((product) => {
-      const productCategories = product.dataset.categories
-        ? product.dataset.categories.split(" ")
-        : [];
-      const isVisible =
-        activeFilters.length === 0 ||
-        activeFilters.every((filter) => productCategories.includes(filter));
-
-      if (isVisible) {
-        product.style.display = "block";
-      } else {
-        product.style.display = "none";
+  // Collect all active filters
+  allCheckboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+          const filterGroup = checkbox.closest('.filter-group').querySelector('h4').dataset.target;
+          if (!activeFilters[filterGroup]) {
+              activeFilters[filterGroup] = [];
+          }
+          activeFilters[filterGroup].push(checkbox.id);
       }
-    });
-  }
-
-  // Function to toggle dropdowns
-  document.querySelectorAll(".filter-heading").forEach((heading) => {
-    heading.addEventListener("click", function () {
-      const content = document.getElementById(heading.dataset.target);
-      content.style.display =
-        content.style.display === "block" ? "none" : "block";
-    });
   });
+
+  // Show or hide products based on active filters
+  productCards.forEach(card => {
+      let showCard = false; // By default, do not show the card
+
+      // Check if product matches any active filters
+      for (const [group, filters] of Object.entries(activeFilters)) {
+          const productCategories = card.dataset.categories.split(' '); // Split categories into array
+
+          // Check if product's categories match any of the active filters for the group
+          if (filters.some(filter => productCategories.includes(filter))) {
+              showCard = true;
+              break;
+          }
+      }
+
+      // Toggle product visibility
+      card.style.display = showCard ? 'block' : 'none';
+  });
+}
+
+// Function to clear all filters
+function clearFilters() {
+  const allCheckboxes = document.querySelectorAll('.filter-checkbox');
+  allCheckboxes.forEach(checkbox => {
+      checkbox.checked = false;
+  });
+  filterProducts(); // Reset product display
+}
+
+// Add event listeners for checkboxes
+document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+  checkbox.addEventListener('change', filterProducts);
+});
+
+// Add CSS to handle dropdown visibility
+document.addEventListener('DOMContentLoaded', () => {
+  const style = document.createElement('style');
+  style.innerHTML = `
+      .filter-content { display: none; }
+      .filter-content.show { display: block; }
+  `;
+  document.head.appendChild(style);
 });
